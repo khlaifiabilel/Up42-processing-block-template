@@ -1,0 +1,9 @@
+coverage-badge
+pytest
+pytest-coverage
+pytest-pylint
+mypy
+mypy-extensions
+pytest-cov
+pytest-mypy
+black

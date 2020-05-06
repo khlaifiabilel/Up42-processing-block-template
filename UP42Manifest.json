@@ -1,0 +1,35 @@
+{
+  "_up42_specification_version": 2,
+  "name": "a-processing-block",
+  "type": "processing",
+  "tags": [
+    "template"
+  ],
+  "display_name": "Processing Block Template",
+  "description": "This is a template processing block.",
+  "parameters": {
+    "exponent": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "default": 2
+    }
+  },
+  "machine": {
+    "type": "small"
+  },
+  "input_capabilities": {
+    "raster": {
+      "up42_standard": {
+        "format": "GTiff"
+      }
+    }
+  },
+  "output_capabilities": {
+    "raster": {
+      "up42_standard": {
+        "format": "GTiff"
+      }
+    }
+  }
+}

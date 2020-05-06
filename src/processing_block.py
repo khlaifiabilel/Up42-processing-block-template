@@ -30,9 +30,9 @@ class AProcessingBlock(ProcessingBlock):
         if not input_fc.features:
             raise UP42Error(SupportedErrors.NO_INPUT_ERROR)
 
-        for feat in input_fc:
+        for feat in input_fc["features"]:
             logger.info(f"Processing {feat}...")
-            input_path = Path(get_data_path(feat))
+            input_path = Path("/tmp/input/") / Path(get_data_path(feat))
             with rio.open(input_path) as src:
                 src_win = WindowsUtil(src)
                 (output_name, output_path,) = get_output_filename_and_path(
@@ -44,8 +44,9 @@ class AProcessingBlock(ProcessingBlock):
                         exp = src.read(window=win) ** self.exponent
                         dst.write(exp, window=win)
 
-                out_feat = self.get_metadata(feat)
+                out_feat = Feature(bbox=feat.bbox, geometry=feat.geometry)
+                out_feat["properties"] = self.get_metadata(feat)
                 out_feat = set_data_path(out_feat, output_name)
                 logger.info(f"Processed {out_feat}...")
-                output_fc.append(out_feat)
+                output_fc.features.append(out_feat)
             return output_fc

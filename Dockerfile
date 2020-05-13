@@ -1,7 +1,7 @@
 ### Dockerfile to build the UP42 block.
 
 # Use a standard python image as a base
-FROM python:3.7.1-stretch
+FROM up42/up42-blockutils-py37
 
 ARG BUILD_DIR=.
 

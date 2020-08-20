@@ -78,6 +78,8 @@ Install the necessary Python libraries via:
 make install
 ```
 
+If you encounter issues with running `make` commands in MacOS (such as an `xcrun: error: invalid active developer path`), consider following the instructions in this [thread](https://ma.ttias.be/mac-os-xcrun-error-invalid-active-developer-path-missing-xcrun/).
+
 ## Testing the block locally
 
 Before uploading the block to the UP42 platform, we encourage you to run local tests and validations to

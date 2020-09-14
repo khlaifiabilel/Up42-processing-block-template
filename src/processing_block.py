@@ -25,10 +25,10 @@ class AProcessingBlock(ProcessingBlock):
         self.exponent = exponent
 
     def process(self, input_fc: FeatureCollection) -> FeatureCollection:
-        output_fc = FeatureCollection([])
-
         if not input_fc.features:
             raise UP42Error(SupportedErrors.NO_INPUT_ERROR)
+
+        output_fc = FeatureCollection([])
 
         for feat in input_fc["features"]:
             logger.info(f"Processing {feat}...")
@@ -49,4 +49,5 @@ class AProcessingBlock(ProcessingBlock):
                 out_feat = set_data_path(out_feat, output_name)
                 logger.info(f"Processed {out_feat}...")
                 output_fc.features.append(out_feat)
-            return output_fc
+
+        return output_fc

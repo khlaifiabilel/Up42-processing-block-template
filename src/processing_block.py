@@ -35,9 +35,10 @@ class AProcessingBlock(ProcessingBlock):
             input_path = Path("/tmp/input/") / Path(get_data_path(feat))
             with rio.open(input_path) as src:
                 src_win = WindowsUtil(src)
-                (output_name, output_path,) = get_output_filename_and_path(
-                    input_path.name, postfix="processed"
-                )
+                (
+                    output_name,
+                    output_path,
+                ) = get_output_filename_and_path(input_path.name, postfix="processed")
                 dst_meta = src.meta.copy()
                 with rio.open(output_path, "w", **dst_meta) as dst:
                     for win in src_win.windows_regular():

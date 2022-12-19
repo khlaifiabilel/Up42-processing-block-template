@@ -7,3 +7,4 @@ mypy-extensions
 pytest-cov
 pytest-mypy
 black
+gsutil

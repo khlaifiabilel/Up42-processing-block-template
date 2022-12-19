@@ -1,7 +1,10 @@
 ### Dockerfile to build the UP42 block.
 
 # Use a standard python image as a base
-FROM up42/up42-blockutils-py37
+FROM python:3.8-slim
+
+RUN apt-get update && \
+    apt-get install --no-install-recommends --yes build-essential g++
 
 ARG BUILD_DIR=.
 

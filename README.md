@@ -45,7 +45,7 @@ This template requires the **Mac or Ubuntu bash**.
 In order to use this template to create blocks for the UP42 platform the following tools are required:
 
  - [UP42](https://up42.com) account -  Sign up for free!
- - [Python 3.7](https://python.org/downloads)
+ - [Python 3.8](https://python.org/downloads)
  - A virtual environment manager e.g. [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
  - [git](https://git-scm.com/)
  - [docker engine](https://docs.docker.com/engine/)
@@ -63,7 +63,7 @@ First create a new virtual environment called `up42-processing-block`, for examp
 
 ```bash
 # Use the block name as the environment name
-mkvirtualenv --python=$(which python3.7) up42-processing-block
+mkvirtualenv --python=$(which python3.8) up42-processing-block
 ```
 
 Activate the new environment:

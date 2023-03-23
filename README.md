@@ -1,7 +1,7 @@
 # Processing Block template
 ![coverage](coverage.svg)
 
-This is a template for building processing blocks.
+This is a template for building [custom processing blocks](https://docs.up42.com/processing-platform/custom-blocks).
 
 ## Contents
 
@@ -101,8 +101,7 @@ make test
 Then test if the block manifest is valid. The
 [UP42manifest.json](https://github.com/up42/sharpening/blob/master/blocks/sharpening/UP42Manifest.json)
 file contains the block capabilities. They define what kind of data a block accepts and provides, which parameters
-can be used with the block etc. See the
-[UP42 block capabilities documentation](https://docs.up42.com/reference/capabilities.html?highlight=capabilities).
+can be used with the block etc. For more information, see [Block manifest](https://docs.up42.com/processing-platform/custom-blocks/manifest).
 Validate the manifest via:
 
 ```bash
